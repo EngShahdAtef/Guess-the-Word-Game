@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #a1a1a1
+}
+
+body {
+    margin: 0;
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    margin: 0 0 30px;
+    background-color: white;
+
+}
+
+.guess-game {
+    text-align: center;
+    width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .game-area {
+        .inputs {
+            >div {
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+            }
+
+            .disabled-inputs {
+                opacity: .5;
+                pointer-events: none;
+            }
+
+            input {
+                margin: 0 5px;
+                width: 60px;
+                height: 60px;
+                text-align: center;
+                font-size: 40px;
+                caret-color: var(--primary-color);
+                border: none;
+                background-color: white;
+                border-bottom: 3px solid #616161;
+
+                &:focus {
+                    outline-color: #eee;
+                }
+
+                &.yes-in-place {
+                    background-color: #13a8f8;
+                    border: #13a8f8;
+                    color: white;
+                }
+
+                &.not-in-place {
+                    background-color: #f89e13;
+                    border: #f89e13;
+                    color: white;
+                }
+
+                &.no {
+                    background-color: #db3a24f2;
+                    border: #db3a24f2;
+                    color: white;
+                }
+            }
+
+        }
+
+        .control {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            margin: 20px auto;
+            gap: 10px;
+
+            .check {
+                border: none;
+                font-size: 25px;
+                padding: 15px 20px;
+                border-radius: 6px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                -ms-border-radius: 6px;
+                -o-border-radius: 6px;
+                background-color:rgb(255, 177, 75);
+                color: white;
+                cursor: pointer;
+                font-weight: bold;
+                flex: 1;
+            }
+
+            .hint {
+                border: none;
+                font-size: 25px;
+                padding: 15px 20px;
+                border-radius: 6px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                -ms-border-radius: 6px;
+                -o-border-radius: 6px;
+                background-color: rgb(62, 194, 73);
+                color: white;
+                cursor: pointer;
+                font-weight: bold;
+                width: fit-content;
+            }
+
+            button:disabled {
+                background-color: black;
+                opacity: .4;
+                cursor: no-drop;
+            }
+        }
+    }
+
+    .key-colors {
+        .key-color {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: white;
+            margin-bottom: 10px;
+
+            .key {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                margin-right: 10px;
+
+                &.in-place {
+                    background-color: #13a8f8
+                }
+
+                &.not-in-place {
+                    background-color: #f89e13;
+                }
+
+                &.no {
+                    background-color: #db3a24f2;
+                }
+
+            }
+
+            .key-text {
+                font-size: 18px;
+                /* font-weight: bold; */
+            }
+
+        }
+    }
+}
+
+.message {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 0 20px;
+
+    span {
+        font-weight: bold;
+        display: block;
+        font-size: 50px;
+        color: #13a8f8;
+        text-transform: capitalize;
+        margin-top: 10px;
+    }
+
+    p {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+
+
+    .guess-game {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 0 0 70px;
+        padding: 0;
+    }
+
+    .inputs input {
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+    }
+
+    .control {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .inputs {
+        width: 100%;
+    }
+    .check,
+    .hint {
+        font-size: 20px;
+        padding: 12px 18px;
+        width: 100%;
+    }
+
+    .message {
+        font-size: 24px;
+
+        span {
+            font-size: 40px;
+        }
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+    .guess-game {
+        width: 90%;
+    }
+
+    .inputs input {
+        width: 55px;
+        height: 55px;
+        font-size: 35px;
+    }
+
+    .check,
+    .hint {
+        font-size: 22px;
+        padding: 14px 10px;
+    }
+
+    .message {
+        font-size: 28px;
+
+        span {
+            font-size: 45px;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #272727;
+    color: white;
+    font-weight: bold;
+}
