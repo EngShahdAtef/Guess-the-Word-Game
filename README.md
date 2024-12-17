@@ -1,6 +1,6 @@
 # Guess the Word Game
 
-**Guess the Word** is an interactive word-guessing game that allows players to guess a secret word by entering individual letters. Players have six attempts to guess the word correctly, and each guess provides helpful feedback on the letters entered, guiding the player towards the correct answer.
+**Guess the Word** is an interactive word-guessing game that allows players to guess a secret word by entering individual letters. Players have six attempts to guess the word correctly, and each guess provides helpful feedback on the letters entered, guiding the player toward the correct answer.
 
 This project was developed using **JavaScript** to demonstrate the following concepts:
 - DOM Manipulation
@@ -15,7 +15,7 @@ This project was developed using **JavaScript** to demonstrate the following con
   - **Incorrect letter**: Red
 - **Multiple Attempts:** The player has six attempts to guess the word.
 - **Hints System:** Players can use hints to get a clue (limited usage).
-- **Responsive Design:** The game is optimized for both desktop and mobile devices.
+- **Responsive Design:** The game is optimized for desktop and mobile devices.
 
 ### Technologies Used:
 - **HTML5** for the structure and layout.
@@ -38,4 +38,4 @@ To get started with the project, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/guess-the-word-game.git
+   git clone https://github.com/EngShahdAtef/Guess-the-Word-Game.git
